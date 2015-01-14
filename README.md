@@ -4,8 +4,10 @@ npm install
 
 bower install
 
-$ ionic platform add ios
+gulp sass
 
-$ ionic build ios
+ionic platform add ios
 
-$ ionic emulate ios
+ionic build ios
+
+ionic emulate ios
