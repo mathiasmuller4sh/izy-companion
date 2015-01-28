@@ -1,0 +1,19 @@
+<ion-tabs
+        ng-controller="CareCtrl"
+        delegate-handle="care-tabs"
+        class="tabs-striped tabs-top tabs-background-light tabs-color-dark"
+        >
+
+    <ion-tab title="Hier" >
+        <ion-content></ion-content>
+    </ion-tab>
+
+    <ion-tab title="Aujourd'hui" >
+        <div ng-include="'modules/care/care-today.html'"></div>
+    </ion-tab>
+
+    <ion-tab title="Demain" >
+        <ion-content></ion-content>
+    </ion-tab>
+
+</ion-tabs>
