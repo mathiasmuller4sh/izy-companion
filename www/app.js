@@ -1,4 +1,6 @@
-angular.module('izycompanion', ['ionic', 'izy-companion.home'])
+
+angular
+    .module('izycompanion', ['ionic', 'analytics','ngRoute', 'ngResource', 'izy-companion.home', 'izy-companion.user', APP.name])
 
     .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
@@ -17,6 +19,10 @@ angular.module('izycompanion', ['ionic', 'izy-companion.home'])
     .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         $ionicConfigProvider.views.maxCache(0);
         $stateProvider
+            .state('login', {
+                url: "/login",
+                templateUrl: "modules/user/login.html"
+            })
             .state('root', {
                 url: "/",
                 templateUrl: "modules/global/layout.html"

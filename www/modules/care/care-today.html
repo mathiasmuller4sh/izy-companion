@@ -1,26 +1,24 @@
 <ion-content has-tabs="true" >
     <ion-list ng-controller="CareTodayCtrl"
               can-swipe="true">
-        <ion-item ng-repeat="item in items"
+        <ion-item ng-repeat="item in cares"
+                  ng-init="child=currentPerson.childrenById[item.data.childRef]"
                   class="card">
             <a class="item item-thumbnail-left" href="#">
-                <img src="cover.jpg">
-                <h2>L'enfant {{item.id}} est arrivé</h2>
-                <p>Nine Inch Nails</p>
+                <img ng-src="{{child.imgUrl}}">
+                <h2>{{item.start | date:'shortDate'}} {{item.title}} de {{child.firstName}}</h2>
+                <p>{{item.start | date:'shortTime'}} - {{item.end | date:'shortTime'}}</p>
             </a>
 
             <div class="item tabs tabs-secondary tabs-icon-left">
                 <a class="tab-item" href="#">
-                    <i class="icon ion-checkmark-circled"></i>
-                    Confirmer
+                    <i class="icon ion-checkmark-circled"></i>Confirmer
                 </a>
                 <a class="tab-item" href="#">
-                    <i class="icon ion-information-circled"></i>
-                    Modifier
+                    <i class="icon ion-information-circled"></i>Modifier
                 </a>
                 <a class="tab-item" href="#">
-                    <i class="icon ion-close-circled"></i>
-                    Annuler
+                    <i class="icon ion-close-circled"></i>Annuler
                 </a>
             </div>
         </ion-item>

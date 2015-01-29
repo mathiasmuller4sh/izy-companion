@@ -2,6 +2,14 @@
   "name": "izy-companion",
   "private": "true",
   "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.0.0-beta.14"
+    "ionic": "driftyco/ionic-bower#1.0.0-beta.14",
+    "SparkMD5": "https://github.com/satazor/SparkMD5.git#~0.0.2"
+  },
+  "resolutions": {
+    "angular": ">= 1.0.8"
+  },
+  "dependencies": {
+    "angular-resource": "~1.3.11",
+    "angular-route": "~1.3.11"
   }
 }

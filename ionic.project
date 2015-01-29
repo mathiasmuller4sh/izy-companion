@@ -1,4 +1,8 @@
 {
   "name": "izy-companion",
-  "app_id": "fr.mobysolve4u.izy.companion"
+  "app_id": "fr.mobysolve4u.izy.companion",
+  "proxies": [{
+      "path": "/api",
+      "proxyUrl": "http://app.izyboutchou.fr/api"
+  }]
 }
